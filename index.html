@@ -51,26 +51,24 @@
             color: #2d3748;
         }
         table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    table-layout: fixed;
-}
-th, td {
-    padding: 10px;
-    text-align: left;
-    color: #2d3748;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-@media (max-width: 768px) {
-    th, td {
-        font-size: 14px;
-        padding: 5px;
-    }
-}
-
-
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 5px;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            color: #2d3748;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        th {
+            background-color: #4299e1;
+            color: #ffffff;
+        }
         .dataset-section {
             display: none;
         }
@@ -94,8 +92,9 @@ th, td {
                 width: 100%;
                 margin: 5px 0;
             }
-            table, th, td {
+            th, td {
                 font-size: 14px;
+                padding: 5px;
             }
             canvas {
                 max-width: 100%;
@@ -125,14 +124,12 @@ th, td {
                 <tr>
                     <td>Yuvraj Chauhan</td>
                     <td>2022A7PS0135H</td>
-                    <td>Created and maintained the GitHub webpage for the project, including writing HTML content to present the project overview, 
-                        assignment details, and results.</td>
+                    <td>Created and maintained the GitHub webpage for the project, including writing HTML content to present the project overview, assignment details, and results.</td>
                 </tr>
                 <tr>
                     <td>Hrishikesh MK</td>
                     <td>2022A7PS1538H</td>
-                    <td>Implemented the Tomita's algorithm in C++, tested the time for execution of algorithm and found the clique 
-                        distribution.</td>
+                    <td>Implemented the Tomita's algorithm in C++, tested the time for execution of algorithm and found the clique distribution.</td>
                 </tr>
                 <tr>
                     <td>Satya K</td>
