@@ -90,32 +90,8 @@
                 width: 100%;
                 margin: 5px 0;
             }
-            #contributors table, #contributors thead, #contributors tbody, #contributors th, #contributors td, #contributors tr {
-                display: block;
-            }
-            #contributors thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            #contributors tr {
-                margin-bottom: 10px;
-            }
-            #contributors td {
-                border: none;
-                position: relative;
-                padding-left: 50%;
-                text-align: right;
-            }
-            #contributors td:before {
-                content: attr(data-label);
-                position: absolute;
-                left: 6px;
-                width: 45%;
-                padding-right: 10px;
-                white-space: nowrap;
-                text-align: left;
-                font-weight: bold;
+            table, th, td {
+                font-size: 14px;
             }
             canvas {
                 max-width: 100%;
@@ -137,40 +113,38 @@
         <div id="contributors" class="content">
             <h2>Contributors</h2>
             <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Id</th>
-                        <th>Contribution</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Name">Yuvraj Chauhan</td>
-                        <td data-label="Id">2022A7PS0135H</td>
-                        <td data-label="Contribution">Created and maintained the GitHub webpage for the project, including writing HTML content to present the project overview, assignment details, and results.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Name">Hrishikesh MK</td>
-                        <td data-label="Id">2022A7PS1538H</td>
-                        <td data-label="Contribution">Implemented the Tomita's algorithm in C++, tested the time for execution of algorithm and found the clique distribution.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Name">Satya K</td>
-                        <td data-label="Id">2021B3A70723H</td>
-                        <td data-label="Contribution">Implemented the Eppstein's algorithm in C++, tested it and collected the required data</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Name">Harinandan Arun</td>
-                        <td data-label="Id">2021B3A72396H</td>
-                        <td data-label="Contribution">Implemented the Chiba's algorithm in C++, contributed to the report</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Name">Ashish C</td>
-                        <td data-label="Id">2021B3A73029H</td>
-                        <td data-label="Contribution">Implemented the Chiba's Algorithm in C++, contributed to the report</td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Id</th>
+                    <th>Contribution</th>
+                </tr>
+                <tr>
+                    <td>Yuvraj Chauhan</td>
+                    <td>2022A7PS0135H</td>
+                    <td>Created and maintained the GitHub webpage for the project, including writing HTML content to present the project overview, 
+                        assignment details, and results.</td>
+                </tr>
+                <tr>
+                    <td>Hrishikesh MK</td>
+                    <td>2022A7PS1538H</td>
+                    <td>Implemented the Tomita's algorithm in C++, tested the time for execution of algorithm and found the clique 
+                        distribution.</td>
+                </tr>
+                <tr>
+                    <td>Satya K</td>
+                    <td>2021B3A70723H</td>
+                    <td>Implemented the Eppstein's algorithm in C++, tested it and collected the required data</td>
+                </tr>
+                <tr>
+                    <td>Harinandan Arun</td>
+                    <td>2021B3A72396H</td>
+                    <td>Implemented the Chiba's algorithm in C++, contributed to the report</td>
+                </tr>
+                <tr>
+                    <td>Ashish C</td>
+                    <td>2021B3A73029H</td>
+                    <td>Implemented the Chiba's Algorithm in C++, contributed to the report</td>
+                </tr>
             </table>
         </div>
         
@@ -309,21 +283,21 @@
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-    labels: labels,
-    datasets: [{
-        label: 'Execution Time (s)',
-        data: data,
-        backgroundColor: 'rgba(66, 153, 225, 0.6)',
-        borderColor: 'rgba(66, 153, 225, 1)',
-        borderWidth: 1
-    }]
-},
-options: {
-    scales: {
-        x: { title: { display: true, text: 'Algorithm' } },
-        y: { beginAtZero: true, title: { display: true, text: 'Seconds' } }
-    }
-}
+                    labels: labels,
+                    datasets: [{
+                        label: 'Execution Time (s)',
+                        data: data,
+                        backgroundColor: 'rgba(66, 153, 225, 0.6)',
+                        borderColor: 'rgba(66, 153, 225, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: { title: { display: true, text: 'Algorithm' } },
+                        y: { beginAtZero: true, title: { display: true, text: 'Seconds' } }
+                    }
+                }
             });
         }
 
@@ -342,11 +316,11 @@ options: {
                     }]
                 },
                 options: {
-                    scales: {
-                        x: { title: { display: true, text: 'Clique Size' } },
-                        y: { beginAtZero: true, title: { display: true, text: 'Number of Cliques' } }
-                    }
-                }
+    scales: {
+        x: { title: { display: true, text: 'Clique Size' } },
+        y: { beginAtZero: true, title: { display: true, text: 'Number of Cliques' } }
+    }
+}
             });
         }
 
@@ -371,4 +345,3 @@ options: {
     </script>
 </body>
 </html>
-
