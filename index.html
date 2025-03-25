@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +13,9 @@
             color: #2d3748;
             padding: 20px;
         }
-
-        h1,
-        h2,
-        h3,
-        h4 {
+        h1, h2, h3, h4 {
             color: #4a5568;
         }
-
         .container {
             max-width: 800px;
             margin: auto;
@@ -30,11 +24,9 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .button-container {
             margin: 20px 0;
         }
-
         button {
             margin: 10px;
             padding: 12px 24px;
@@ -46,11 +38,9 @@
             color: white;
             transition: 0.3s;
         }
-
         button:hover {
             background: #3182ce;
         }
-
         .content {
             display: none;
             margin-top: 20px;
@@ -60,82 +50,73 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             color: #2d3748;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
-            table-layout: fixed;
         }
-
-        table,
-        th,
-        td {
+        table, th, td {
             border: 1px solid #e2e8f0;
         }
-
-        th,
-        td {
+        th, td {
             padding: 10px;
             text-align: left;
             color: #2d3748;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
-
         th {
             background-color: #4299e1;
             color: #ffffff;
         }
-
         .dataset-section {
             display: none;
         }
-
         .algorithm-content {
             display: none;
         }
-
         .graph-container {
             margin-top: 20px;
         }
-
         canvas {
             background-color: #ffffff;
             border-radius: 5px;
             padding: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
             }
-
             button {
                 width: 100%;
                 margin: 5px 0;
             }
-
-            th,
-            td {
-                font-size: 14px;
-                padding: 5px;
-            }
-
-            td:before {
-                content: attr(data-label);
-                float: left;
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-
-            td {
+            #contributors table, #contributors thead, #contributors tbody, #contributors th, #contributors td, #contributors tr {
                 display: block;
-                text-align: right;
-                padding-left: 50%;
             }
-
+            #contributors thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            #contributors tr {
+                margin-bottom: 10px;
+            }
+            #contributors td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+            #contributors td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+            }
             canvas {
                 max-width: 100%;
                 height: auto;
@@ -143,17 +124,16 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <h1>Maximal Clique Enumeration Report</h1>
-
+        
         <div class="button-container">
             <button onclick="showContent('contributors')">Contributors</button>
             <button onclick="showContent('datasets')">Datasets</button>
             <button onclick="showContent('algorithms')">Algorithms</button>
         </div>
-
+        
         <div id="contributors" class="content">
             <h2>Contributors</h2>
             <table>
@@ -168,157 +148,87 @@
                     <tr>
                         <td data-label="Name">Yuvraj Chauhan</td>
                         <td data-label="Id">2022A7PS0135H</td>
-                        <td data-label="Contribution">Created and maintained the GitHub webpage for the project,
-                            including writing HTML content to present the project overview, assignment details, and
-                            results.</td>
+                        <td data-label="Contribution">Created and maintained the GitHub webpage for the project, including writing HTML content to present the project overview, assignment details, and results.</td>
                     </tr>
                     <tr>
                         <td data-label="Name">Hrishikesh MK</td>
                         <td data-label="Id">2022A7PS1538H</td>
-                        <td data-label="Contribution">Implemented the Tomita's algorithm in C++, tested the time for
-                            execution of algorithm and found the clique distribution.</td>
+                        <td data-label="Contribution">Implemented the Tomita's algorithm in C++, tested the time for execution of algorithm and found the clique distribution.</td>
                     </tr>
                     <tr>
                         <td data-label="Name">Satya K</td>
                         <td data-label="Id">2021B3A70723H</td>
-                        <td data-label="Contribution">Implemented the Eppstein's algorithm in C++, tested it and
-                            collected the required data</td>
+                        <td data-label="Contribution">Implemented the Eppstein's algorithm in C++, tested it and collected the required data</td>
                     </tr>
                     <tr>
                         <td data-label="Name">Harinandan Arun</td>
                         <td data-label="Id">2021B3A72396H</td>
-                        <td data-label="Contribution">Implemented the Chiba's algorithm in C++, contributed to the
-                            report</td>
+                        <td data-label="Contribution">Implemented the Chiba's algorithm in C++, contributed to the report</td>
                     </tr>
                     <tr>
                         <td data-label="Name">Ashish C</td>
                         <td data-label="Id">2021B3A73029H</td>
-                        <td data-label="Contribution">Implemented the Chiba's Algorithm in C++, contributed to the
-                            report</td>
+                        <td data-label="Contribution">Implemented the Chiba's Algorithm in C++, contributed to the report</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
+        
         <div id="datasets" class="content">
             <h2>Datasets</h2>
-
+            
             <button onclick="toggleDataset('enron')">Enron Email Dataset</button>
             <div id="enron" class="dataset-section">
                 <table>
-                    <tr>
-                        <th>Graph Type</th>
-                        <td data-label="Graph Type">Undirected Graph</td>
-                    </tr>
-                    <tr>
-                        <th>Nodes / Edges</th>
-                        <td data-label="Nodes / Edges">36,692 / 183,831</td>
-                    </tr>
-                    <tr>
-                        <th>Clustering Coefficient</th>
-                        <td data-label="Clustering Coefficient">0.4970</td>
-                    </tr>
-                    <tr>
-                        <th>Description</th>
-                        <td data-label="Description">Email communications within Enron</td>
-                    </tr>
+                    <tr><th>Graph Type</th><td>Undirected Graph</td></tr>
+                    <tr><th>Nodes / Edges</th><td>36,692 / 183,831</td></tr>
+                    <tr><th>Clustering Coefficient</th><td>0.4970</td></tr>
+                    <tr><th>Description</th><td>Email communications within Enron</td></tr>
                 </table>
                 <canvas id="enronChart"></canvas>
             </div>
-
+            
             <button onclick="toggleDataset('wiki')">Wiki-Vote Dataset</button>
             <div id="wiki" class="dataset-section">
                 <table>
-                    <tr>
-                        <th>Graph Type</th>
-                        <td data-label="Graph Type">Directed Graph</td>
-                    </tr>
-                    <tr>
-                        <th>Nodes / Edges</th>
-                        <td data-label="Nodes / Edges">7,115 / 103,689</td>
-                    </tr>
-                    <tr>
-                        <th>Clustering Coefficient</th>
-                        <td data-label="Clustering Coefficient">0.1409</td>
-                    </tr>
-                    <tr>
-                        <th>Description</th>
-                        <td data-label="Description">Wikipedia administrator election voting data</td>
-                    </tr>
+                    <tr><th>Graph Type</th><td>Directed Graph</td></tr>
+                    <tr><th>Nodes / Edges</th><td>7,115 / 103,689</td></tr>
+                    <tr><th>Clustering Coefficient</th><td>0.1409</td></tr>
+                    <tr><th>Description</th><td>Wikipedia administrator election voting data</td></tr>
                 </table>
                 <canvas id="wikiChart"></canvas>
             </div>
-
+            
             <button onclick="toggleDataset('skitter')">AS-Skitter Dataset</button>
             <div id="skitter" class="dataset-section">
                 <table>
-                    <tr>
-                        <th>Graph Type</th>
-                        <td data-label="Graph Type">Undirected Graph</td>
-                    </tr>
-                    <tr>
-                        <th>Nodes / Edges</th>
-                        <td data-label="Nodes / Edges">1.7 million / 11 million</td>
-                    </tr>
-                    <tr>
-                        <th>Clustering Coefficient</th>
-                        <td data-label="Clustering Coefficient">0.2581</td>
-                    </tr>
-                    <tr>
-                        <th>Description</th>
-                        <td data-label="Description">Internet topology from 2005 traceroute data</td>
-                    </tr>
+                    <tr><th>Graph Type</th><td>Undirected Graph</td></tr>
+                    <tr><th>Nodes / Edges</th><td>1.7 million / 11 million</td></tr>
+                    <tr><th>Clustering Coefficient</th><td>0.2581</td></tr>
+                    <tr><th>Description</th><td>Internet topology from 2005 traceroute data</td></tr>
                 </table>
                 <canvas id="skitterChart"></canvas>
             </div>
         </div>
-
+        
         <div id="algorithms" class="content">
             <h2>Algorithms</h2>
             <button onclick="showAlgorithmContent('tomita')">Tomita's Algorithm</button>
             <button onclick="showAlgorithmContent('bron')">Bron-Kerbosch Algorithm (ELS)</button>
             <button onclick="showAlgorithmContent('chiba')">Chiba's Algorithm</button>
-
+        
             <div id="tomita" class="algorithm-content">
                 <h2>Tomita's Algorithm</h2>
-                <p>Tomita's Algorithm for finding maximal cliques uses a depth first search (backtracking) method to
-                    generate all maximal cliques for an undirected graph. It makes use of a Global set Q, initially
-                    empty, which it expands using the expand function. Set Q stores subgraph constituting the cliques at
-                    each instance of expand function. Size of MAXCLIQUES at the end of the algorithm gives the number of
-                    cliques.</p>
-
+                <p>Tomita's Algorithm for finding maximal cliques uses a depth first search (backtracking) method to generate all maximal cliques for an undirected graph. It makes use of a Global set Q, initially empty, which it expands using the expand function. Set Q stores subgraph constituting the cliques at each instance of expand function. Size of MAXCLIQUES at the end of the algorithm gives the number of cliques.</p>
+                
                 <h3>Results</h3>
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Dataset</th>
-                            <th>Max Clique Size</th>
-                            <th>Total Maximal Cliques</th>
-                            <th>Execution Time (s)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Dataset">Email-Enron</td>
-                            <td data-label="Max Clique Size">20</td>
-                            <td data-label="Total Maximal Cliques">226,859</td>
-                            <td data-label="Execution Time (s)">25.534</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Dataset">Wiki-Vote</td>
-                            <td data-label="Max Clique Size">17</td>
-                            <td data-label="Total Maximal Cliques">459,002</td>
-                            <td data-label="Execution Time (s)">32.555</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Dataset">AS-Skitter</td>
-                            <td data-label="Max Clique Size">67</td>
-                            <td data-label="Total Maximal Cliques">37,322,355</td>
-                            <td data-label="Execution Time (s)">34,068</td>
-                        </tr>
-                    </tbody>
+                    <tr><th>Dataset</th><th>Max Clique Size</th><th>Total Maximal Cliques</th><th>Execution Time (s)</th></tr>
+                    <tr><td>Email-Enron</td><td>20</td><td>226,859</td><td>25.534</td></tr>
+                    <tr><td>Wiki-Vote</td><td>17</td><td>459,002</td><td>32.555</td></tr>
+                    <tr><td>AS-Skitter</td><td>67</td><td>37,322,355</td><td>34,068</td></tr>
                 </table>
-
+        
                 <div class="graph-container">
                     <h3>Clique Size Distribution</h3>
                     <h4>AS-Skitter Clique Size Distribution</h4>
@@ -329,45 +239,19 @@
                     <canvas id="tomitaEnronChart"></canvas>
                 </div>
             </div>
-
+        
             <div id="bron" class="algorithm-content">
                 <h2>Bron-Kerbosch Algorithm (ELS)</h2>
-                <p>The MaxClique algorithm is designed to find the maximum clique in an undirected graph. It employs
-                    several pruning techniques to efficiently find the maximum clique, including vertex ordering,
-                    degree-based pruning, and recursive exploration.</p>
-
+                <p>The MaxClique algorithm is designed to find the maximum clique in an undirected graph. It employs several pruning techniques to efficiently find the maximum clique, including vertex ordering, degree-based pruning, and recursive exploration.</p>
+                
                 <h3>Results</h3>
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Dataset</th>
-                            <th>Max Clique Size</th>
-                            <th>Total Maximal Cliques</th>
-                            <th>Execution Time (s)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Dataset">Email-Enron</td>
-                            <td data-label="Max Clique Size">20</td>
-                            <td data-label="Total Maximal Cliques">226,859</td>
-                            <td data-label="Execution Time (s)">14.962</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Dataset">Wiki-Vote</td>
-                            <td data-label="Max Clique Size">17</td>
-                            <td data-label="Total Maximal Cliques">459,002</td>
-                            <td data-label="Execution Time (s)">15.760</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Dataset">AS-Skitter</td>
-                            <td data-label="Max Clique Size">67</td>
-                            <td data-label="Total Maximal Cliques">37,322,355</td>
-                            <td data-label="Execution Time (s)">3,428</td>
-                        </tr>
-                    </tbody>
+                    <tr><th>Dataset</th><th>Max Clique Size</th><th>Total Maximal Cliques</th><th>Execution Time (s)</th></tr>
+                    <tr><td>Email-Enron</td><td>20</td><td>226,859</td><td>14.962</td></tr>
+                    <tr><td>Wiki-Vote</td><td>17</td><td>459,002</td><td>15.760</td></tr>
+                    <tr><td>AS-Skitter</td><td>67</td><td>37,322,355</td><td>3,428</td></tr>
                 </table>
-
+        
                 <div class="graph-container">
                     <h3>Clique Size Distribution</h3>
                     <h4>AS-Skitter Clique Size Distribution</h4>
@@ -378,45 +262,19 @@
                     <canvas id="bronEnronChart"></canvas>
                 </div>
             </div>
-
+        
             <div id="chiba" class="algorithm-content">
                 <h2>Chiba's Algorithm</h2>
-                <p>Chiba's Algorithm follows a recursive approach, exploring vertex neighborhoods to identify and extend
-                    maximal cliques. It maintains efficiency through vertex ordering by degree and uses data structures
-                    S and T throughout the algorithm.</p>
-
+                <p>Chiba's Algorithm follows a recursive approach, exploring vertex neighborhoods to identify and extend maximal cliques. It maintains efficiency through vertex ordering by degree and uses data structures S and T throughout the algorithm.</p>
+                
                 <h3>Results</h3>
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Dataset</th>
-                            <th>Max Clique Size</th>
-                            <th>Total Maximal Cliques</th>
-                            <th>Execution Time (s)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Dataset">Email-Enron</td>
-                            <td data-label="Max Clique Size">20</td>
-                            <td data-label="Total Maximal Cliques">226,859</td>
-                            <td data-label="Execution Time (s)">687.312</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Dataset">Wiki-Vote</td>
-                            <td data-label="Max Clique Size">17</td>
-                            <td data-label="Total Maximal Cliques">459,002</td>
-                            <td data-label="Execution Time (s)">335.394</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Dataset">AS-Skitter</td>
-                            <td data-label="Max Clique Size">67</td>
-                            <td data-label="Total Maximal Cliques">37,322,355</td>
-                            <td data-label="Execution Time (s)">-</td>
-                        </tr>
-                    </tbody>
+                    <tr><th>Dataset</th><th>Max Clique Size</th><th>Total Maximal Cliques</th><th>Execution Time (s)</th></tr>
+                    <tr><td>Email-Enron</td><td>20</td><td>226,859</td><td>687.312</td></tr>
+                    <tr><td>Wiki-Vote</td><td>17</td><td>459,002</td><td>335.394</td></tr>
+                    <tr><td>AS-Skitter</td><td>67</td><td>37,322,355</td><td>-</td></tr>
                 </table>
-
+        
                 <div class="graph-container">
                     <h3>Clique Size Distribution</h3>
                     <h4>AS-Skitter Clique Size Distribution</h4>
@@ -429,7 +287,7 @@
             </div>
         </div>
     </div>
-
+   
     <script>
         function showContent(id) {
             document.querySelectorAll('.content').forEach(div => div.style.display = 'none');
@@ -451,21 +309,21 @@
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'Execution Time (s)',
-                        data: data,
-                        backgroundColor: 'rgba(66, 153, 225, 0.6)',
-                        borderColor: 'rgba(66, 153, 225, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        x: { title: { display: true, text: 'Algorithm' } },
-                        y: { beginAtZero: true, title: { display: true, text: 'Seconds' } }
-                    }
-                }
+    labels: labels,
+    datasets: [{
+        label: 'Execution Time (s)',
+        data: data,
+        backgroundColor: 'rgba(66, 153, 225, 0.6)',
+        borderColor: 'rgba(66, 153, 225, 1)',
+        borderWidth: 1
+    }]
+},
+options: {
+    scales: {
+        x: { title: { display: true, text: 'Algorithm' } },
+        y: { beginAtZero: true, title: { display: true, text: 'Seconds' } }
+    }
+}
             });
         }
 
@@ -496,7 +354,7 @@
         createHistogram('wikiChart', ['Tomita', 'ELS', 'Chiba'], [32.555, 15.760, 335.394]);
         createHistogram('skitterChart', ['Tomita', 'ELS', 'Chiba'], [34068, 3428, 0]);
 
-        const cliqueSizes = Array.from({ length: 20 }, (_, i) => i + 1);
+        const cliqueSizes = Array.from({length: 20}, (_, i) => i + 1);
         const tomitaSkitterData = [2319807, 3171609, 1823321, 939336, 684873, 598284, 588889, 608937, 665661, 728098, 798073, 877282, 945194, 980831, 939987, 839330, 729601, 639413, 600192, 611976];
         const tomitaWikiData = [8655, 13718, 27292, 48416, 68872, 83266, 76732, 54456, 35470, 21736, 11640, 5449, 2329, 740, 208, 23, 0];
         const tomitaEnronData = [14070, 7077, 13319, 18143, 22715, 25896, 24766, 22884, 21393, 17833, 15181, 11487, 7417, 3157, 1178, 286, 41, 10, 6, 0];
@@ -512,5 +370,5 @@
         createCliqueSizeHistogram('chibaEnronChart', cliqueSizes, tomitaEnronData, 'Email-Enron');
     </script>
 </body>
-
 </html>
+
