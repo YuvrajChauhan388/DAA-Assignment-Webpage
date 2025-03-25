@@ -316,17 +316,17 @@
                     }]
                 },
                 options: {
-                    scales: {
-                        x: { title: { display: true, text: 'Clique Size' } },
-y: { beginAtZero: true, title: { display: true, text: 'Number of Cliques' } }
-                    }
-                }
+    scales: {
+        x: { title: { display: true, text: 'Clique Size' } },
+        y: { beginAtZero: true, title: { display: true, text: 'Number of Cliques' } }
+    }
+}
             });
         }
 
         createHistogram('enronChart', ['Tomita', 'ELS', 'Chiba'], [25.534, 14.962, 687.312]);
         createHistogram('wikiChart', ['Tomita', 'ELS', 'Chiba'], [32.555, 15.760, 335.394]);
-        createHistogram('skitterChart', ['Tomita', 'ELS', 'Chiba'],[34068, 3428, 0]);
+        createHistogram('skitterChart', ['Tomita', 'ELS', 'Chiba'], [34068, 3428, 0]);
 
         const cliqueSizes = Array.from({length: 20}, (_, i) => i + 1);
         const tomitaSkitterData = [2319807, 3171609, 1823321, 939336, 684873, 598284, 588889, 608937, 665661, 728098, 798073, 877282, 945194, 980831, 939987, 839330, 729601, 639413, 600192, 611976];
